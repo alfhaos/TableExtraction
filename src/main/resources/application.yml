@@ -1,0 +1,24 @@
+server:
+  servlet:
+    context-path: /intern
+  port: 10000
+
+spring:
+  datasource:
+    url: jdbc:tibero:thin:@10.47.39.125:8629:DB_D_GMD
+    username: TESTER
+    password: tester
+    driver-class-name: com.tmax.tibero.jdbc.TbDriver
+  servlet:
+    multipart:
+      enabled: true
+      location: c:\\upload
+      max-file-size: 10MB
+      max-request-size: 50MB
+        
+        
+      
+mybatis:
+  type-aliases-package: com.vtw.intern
+  mapper-locations: classpath*:mapper/**/*-mapper.xml
+  

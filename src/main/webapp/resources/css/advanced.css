@@ -1,0 +1,201 @@
+@CHARSET "UTF-8";
+
+
+.jdbcFormContainer{
+	position: relative;
+	overflow: hidden;
+	width: 400px;
+	margin: 350px auto 0;
+	border-radius: 6px;
+	box-shadow: 2px 2px 20px rgb(100 100 100 / 30%);
+}
+
+.DBConnect{
+	display: inline-block;
+    height: 60px;
+    padding: 0;
+    background-color: #00a9cc;
+    border: none;
+    border-top: 1px solid #01809a;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 15px;
+}
+.btnConnect{
+	background-color: #00a9cc;
+}
+
+.user{
+	padding: 10px 5px;
+    width: 255px;
+    border: none;
+}
+
+.pwd{
+	padding: 10px 5px;
+    width: 255px;
+    border: none;
+}
+
+.inputUser{
+	border-bottom: 1px solid #c2c2c2;
+	margin: 0;
+    padding: 13px 0;
+    background: #fff;
+}
+.inputUser label{
+	display: inline-block;
+    width: 80px;
+    padding: 0 0 0 0px;
+    font-size: 16px;
+    color: #666;
+    font-weight: bold;
+}
+.inputPwd{
+	margin: 0;
+    padding: 13px 0;
+    background: #fff;
+}
+.inputPwd label{
+	display: inline-block;
+    width: 80px;
+    padding: 0 0 0 0px;
+    font-size: 16px;
+    color: #666;
+    font-weight: bold;
+}
+.advancedContainer{
+	text-align: center;
+	position: relative;
+	height: 800px;
+	top : 100px;
+	
+}
+.jdbcFormContainer{
+	position: relative;
+	bottom: 40%;
+}
+
+.stSelectContainer{
+	display: inline-block;
+    position: relative;
+    width: 70%;
+    height: 100%;
+}
+
+.schemaSelectContainer{
+	float: left;
+	width: 33%;
+	display: inline-block;
+	border-bottom: 1px solid #00000070;
+	border-right: 1px solid #00000070;
+	border-left: 1px solid #00000070;
+	border-top: 1px solid #00000070;
+	cursor: pointer;
+	height: 10%;
+}
+
+.tableSelectContainer{
+	height: 10%;
+	float: left;
+	width: 33%;
+	display: inline-block;
+	border-bottom: 1px solid #00000070;
+	border-right: 1px solid #00000070;
+	border-top: 1px solid #00000070;
+	cursor: pointer;
+}
+.columnSelectContainer{
+	float: left;
+	height: 10%;
+	width: 34%;
+	display: inline-block;
+	border-bottom: 1px solid #00000070;
+	border-right: 1px solid #00000070;
+	border-top: 1px solid #00000070;
+}
+
+.search{
+	width: 100%;
+	height: 10%;
+	position: relative;
+	top: 10%;
+	border-right: 1px solid #00000070;
+	border-left: 1px solid #00000070;
+}
+.inputSearch{
+	float: left;
+	margin-left: 5%;
+	position: relative;
+    bottom: 70%;
+	width: 462px;
+    height: 38px;
+}
+.content{
+    position: relative;
+    top: 5%;
+    width: 100%;
+    height: 80%;
+    float: left;
+    overflow: auto;
+    border-bottom: 1px solid #00000070;
+	border-right: 1px solid #00000070;
+	border-left: 1px solid #00000070;
+   
+}
+.advancedFile{
+	position: relative;
+	float: right;
+	top: 78%;
+}
+.extractAd{
+	position: relative;
+	top: 200px;
+}
+.adMainContainer{
+	position: relative;
+	text-align: center;
+	top: 12rem;
+}
+
+.adTable{
+	width: 800px;
+	height: 200px;
+	border: 1px solid black;
+	margin: 0px auto;
+	position: relative;
+    background-color: white;
+}
+.content button {
+	border: 1px solid lightgrey;
+    width: 30%;
+    height: 12%;
+}
+.content input {
+	margin-left: 1%;
+}
+.ckColumn {
+	margin-bottom: 0.5%;
+}
+
+.advancedFooter button {
+    position: relative;
+    left: 34.8%;
+}
+
+.stSelectContainer span{
+	position: relative;
+    top: 23%;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.userName{
+    top: -65% !important;
+}
+
+.progressText{
+	position: absolute;
+    left: 20%;
+}

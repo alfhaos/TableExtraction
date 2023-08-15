@@ -1,0 +1,163 @@
+@CHARSET "UTF-8";
+
+body{
+	background-color: rgb(242, 242, 244) !important; 
+    opacity: 0.7;    /*투명도 설정*/
+    position: sticky;
+    top: -30px;
+    padding-top: 30px;
+    z-index: 9999;
+	
+}
+
+.vtw_logo {
+	width:300px;
+}
+.container-header{
+	position:relative;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: white;
+}
+.titleContainer{
+	position:relative;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: white;
+}
+.material-icons {
+    font-size: 8rem;
+}
+
+.card-basic {
+	display: inline-block;
+	width: 250px;
+	height: 175px;
+    text-align: center;
+    margin-right: 150px;
+    cursor: pointer;
+}
+
+.card-advanced {
+	display: inline-block;
+	width: 250px;
+	height: 175px;
+    text-align: center;
+    margin-right: 150px;
+    cursor: pointer;
+}
+.card-expert {
+	display: inline-block;
+    width: 250px;
+	height: 175px;
+    text-align: center;
+    margin-right: 150px;
+	cursor: pointer;
+}
+.container-main{
+	position: relative;
+    top: 200px;
+}
+
+.title {
+	position: relative;
+    bottom: 10px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.projectList{
+	text-align: center;
+}
+
+.projectList > div{
+	position: relative;
+    opacity: 0.8;
+    background-color: whitesmoke;
+    border-radius: 50px;
+    box-shadow: 5px 5px 5px 5px gray;
+    margin-top: 300px;
+}
+.projectList span{
+	font-size: 8rem;
+}
+
+.progressContainer{
+	position: relative;
+    width: 100%;
+    height: 5px;
+    background-color: gray;
+    border-radius: 50px;
+    margin-top: 1rem;
+}
+.bar{
+	position: absolute;
+    width: 1%;
+    height: 100%;
+    border-radius: 50px;
+    background-color: #00a9cc;
+}
+.step1Container{
+	display: inline-block;
+	position: relative;
+    float: left;
+}
+.step2Container{
+	display: inline-block;
+	position: relative;
+	right: auto;
+    left: auto;
+}
+.step3Container{
+	display: inline-block;
+	position: relative;
+	float: right;
+}
+#step1{
+	display: inline-block;
+    position: relative;
+    bottom: 17px;
+    right: 15%;
+    color: #00a9cc;
+   	/*#00a9cc*/
+    font-size: 2rem;
+    border-radius: 25px;
+}
+#step1Check{
+	position: relative;
+	right: 70%;
+    bottom: 21px;
+    color: white;
+}
+#step2{
+	display: inline-block;
+    position: relative;
+    bottom: 17px;
+    color: white;
+    font-size: 2rem;
+    border-radius: 25px;
+}
+#step2Check{
+	position: relative;
+	right: 55%;
+    bottom: 21px;
+    color: gray;
+}
+#step3{
+	display: inline-block;
+    position: relative;
+    bottom: 17px;
+    left: 55%;
+    color: white;
+    font-size: 2rem;
+    border-radius: 25px;
+}
+#step3Check{
+	position: relative;
+    bottom: 21px;
+    color: gray;
+}

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+ <mapper namespace = "com.vtw.intern.extract.model.repository.BasicRepository">
+ 
+ 
+ 	<select id="extractTable" resultMap="info">
+		SELECT 
+			ROW_NUMBER() OVER(ORDER BY DATA_TYPE) AS ROW_NUMBER,
+			ACC.COMMENTS,
+			ATC.TABLE_NAME,
+			ATC.COLUMN_NAME,
+			ATC.DATA_TYPE,
+			ATC.DATA_LENGTH,
+			ATC.NULLABLE,
+			ATC.DATA_DEFAULT,
+			RES.CONSTRAINT_NAME,
+			RES.CON_TYPE,
+			RES.CONSTRAINT_TYPE,
+			RES.DELETE_RULE
+		
+		FROM 
+			USER_TAB_COLUMNS ATC LEFT JOIN (
+			SELECT
+				DISTINCT UC.CONSTRAINT_NAME,
+				UC.CON_TYPE,
+				UC.CONSTRAINT_TYPE,
+				UC.DELETE_RULE,
+				AC.COLUMN_NAME
+			FROM
+				USER_CONSTRAINTS UC JOIN ALL_CONS_COLUMNS AC
+				ON UC.CONSTRAINT_NAME = AC.CONSTRAINT_NAME
+			WHERE
+				AC.TABLE_NAME = #{tableName}  AND CONSTRAINT_TYPE IN ('P','R')) RES ON ATC.COLUMN_NAME = RES.COLUMN_NAME
+			JOIN (SELECT COMMENTS,COLUMN_NAME FROM USER_COL_COMMENTS WHERE TABLE_NAME = #{tableName}) ACC ON ATC.COLUMN_NAME = ACC.COLUMN_NAME	
+		WHERE 
+			ATC.TABLE_NAME = #{tableName}
+
+ 	</select>
+ 	
+ 	<select id="selectCommentsTable" resultType="string">
+ 		SELECT 
+ 			B.COMMENTS
+		FROM
+		  	USER_TABLES A, USER_TAB_COMMENTS B
+		WHERE  
+			A.TABLE_NAME = B.TABLE_NAME AND  A.TABLE_NAME = #{tableName}
+		ORDER BY 
+			A.TABLE_NAME
+ 	</select>
+ 	
+ 	<resultMap type="com.vtw.intern.extract.model.dto.DBTableInfo" id="info">
+ 		<result property="rowNumber" 		column="ROW_NUMBER"/>
+ 		<result property="columnComment" 	column="COMMENTS"/>
+ 		<result property="tableName" 		column="TABLE_NAME"/>
+ 		<result property="columnName" 		column="COLUMN_NAME"/>
+ 		<result property="dataType" 		column="DATA_TYPE"/>
+ 		<result property="dataLength" 		column="DATA_LENGTH"/>
+ 		<result property="nullable" 		column="NULLABLE"/>
+ 		<result property="dataDefault" 		column="DATA_DEFAULT"/>
+ 		<result property="constraintName" 	column="CONSTRAINT_NAME"/>
+ 		<result property="conType" 			column="CON_TYPE"/>
+ 		<result property="constraintType" 	column="CONSTRAINT_TYPE"/>
+ 		<result property="deleteRule" 		column="DELETE_RULE"/>
+ 	</resultMap>
+ 
+ </mapper>
