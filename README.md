@@ -1,12 +1,12 @@
 DB 테이블 정보 추출후 QUARTZ 스케줄러를 통한 다양한 포맷의 파일 생성을 목표로 진행한 프로젝트 입니다.
 
 [데이터 흐름도]
-![1.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/fb75f5d1-066d-4e6d-9b42-d686b4fe6634/1.png)
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/25773ffc-053a-49cc-b6f3-2e50859fb30c/Untitled.png)
+![1](https://github.com/alfhaos/TableExtraction/assets/87509332/1c8456bc-58f0-4b0a-81c0-284e782a2577)
+![Untitled](https://github.com/alfhaos/TableExtraction/assets/87509332/1155bd44-80f5-4dd5-be2c-3cc6ea1ec261)
 
 - 스케줄러 흐름도
-![2.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ada1887d-133b-4c8e-a20f-06806fdd838e/2.png)
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/486476be-38c9-438e-a17f-12a7ba31735d/Untitled.png)
+![2](https://github.com/alfhaos/TableExtraction/assets/87509332/3cfec590-b0ab-4b4d-ad1c-2e24c06e68d9)
+![Untitled (1)](https://github.com/alfhaos/TableExtraction/assets/87509332/2cbeeddb-8fd5-403e-b3d5-8f61d117a1b1)
 
 [목표기능]
 - DB테이블 정보 추출
@@ -16,4 +16,14 @@ DB 테이블 정보 추출후 QUARTZ 스케줄러를 통한 다양한 포맷의 
 - 추출 포맷선택(CSV, JSON, XML)
 
 [기간]
-프로젝트 진행 기간 (2022.6 ~ 2022.7).
+프로젝트 진행 기간 (2022.6 ~ 2022.7)
+
+[사용 기술 및 도구]
+- Frontend
+    - jsp, ajax, jquery, jstl
+- Backend
+    - RestApi, quartz, spring security, myBatis, Apache POI
+- Frame work
+    - Spring boot
+- DataBase
+    - Oracle
